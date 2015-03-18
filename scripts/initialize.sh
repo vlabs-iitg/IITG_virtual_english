@@ -577,19 +577,19 @@ echo -e "\tCopying content to the Web DocumentRoot..."
 vlabname=`echo ${PWD##*/}`
 
 #Remove the existing copy (if any) of Virtual Lab from the DocumentRoot
-rm -rf $documentroot/$vlabname
+rm -rf "$documentroot/$vlabname"
 
 #Create a folder for the Virtual Lab within the DocumentRoot
-mkdir $documentroot/$vlabname
+mkdir "$documentroot/$vlabname"
 
 #Copy the web source files
-cp -r build/* $documentroot/$vlabname/.
+cp -r build/* "$documentroot/$vlabname/."
 
 #Remove the existing copy from the build folder
 rm -rf build/*
 
 #Change mode of the folder
-chmod -R 755 $documentroot/$vlabname
+chmod -R 755 "$documentroot/$vlabname"
 
 #Unsetting all Environment Variables Set by the script
 unset all_proxy
