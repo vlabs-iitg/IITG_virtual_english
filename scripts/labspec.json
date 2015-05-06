@@ -65,22 +65,15 @@
                 "hosting": "dedicated", 
                 "installer": ["sudo apt-get update","sudo apt-get install -y apache2"], 
                 "lab_actions": {
-                    "backup": [
-                    ], 
+                    "backup": [], 
                     "clean": [], 
                     "init": ["mv /var/www/index.html index.html.default","cp -r ../build/* /var/www/","chmod 775 /var/www/ -R"], 
                     "pause": [], 
                     "publish": [], 
-                    "restore": [
-                        "restore"
-                    ], 
+                    "restore": [], 
                     "resume": [], 
-                    "shutdown": [
-                        "service apache2 stop"
-                    ], 
-                    "start": [
-                        "service apache2 start"
-                    ], 
+                    "shutdown": ["service apache2 stop"], 
+                    "start": ["service apache2 start"], 
                     "stats": [], 
                     "stop": []
                 }, 
